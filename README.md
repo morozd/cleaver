@@ -39,7 +39,7 @@ Cleaver turns this:
 
 Into this:
 
-![output](https://dsz91cxz97a03.cloudfront.net/hHBVUtbREK.gif)
+![output](https://i.cloudup.com/hHBVUtbREK.gif)
 
 ## Quick Start
 
@@ -87,12 +87,13 @@ the following fields.
     * **twitter**: Your twitter handle
 * **style**: An optional stylesheet to load
 * **output**: A location to save the rendered document (default: *FILENAME-cleaver.html*)
-* **controls**: A boolean representing whether or not arrow buttons should be included (default: *true*)
+* **controls**: Option whether or not arrow buttons should be included (default: *true*)
+* **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
 
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
 
-![author slide](https://dsz91cxz97a03.cloudfront.net/YxgwvqVZNg-1200x1200.png)
+![author slide](https://i.cloudup.com/YxgwvqVZNg-1200x1200.png)
 
 ### Title slide
 
@@ -131,6 +132,7 @@ Or click the buttons
 
 * Fork it
 * Clone it
+* Install dependencies (`npm install`)
 * Checkout a release branch (`git checkout -b feature/cool-wordart`)
 * Make changes, commit, and push
 * Open a pull request!
