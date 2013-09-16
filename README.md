@@ -89,6 +89,9 @@ the following fields.
 * **output**: A location to save the rendered document (default: *FILENAME-cleaver.html*)
 * **controls**: Option whether or not arrow buttons should be included (default: *true*)
 * **agenda**: Option whether or not to insert an agenda slide (similar to a table of contents) after the title (default: *false*)
+* **encoding**: A specified content encoding (default: *utf-8*)
+* **template**: Location of the template used to render the slides (default:
+ *default.css*)
 
 If author is included, the following slide will be automatically inserted
 at the end of your presentation:
@@ -127,6 +130,37 @@ To navigate the slideshow:
 * **forward**: K, L, ENTER, UP, RIGHT, and Space
 
 Or click the buttons
+
+### Templates
+
+By default, cleaver slides are rendered in the following template:
+
+```html
+<div id="wrapper">
+  {{#slides}}
+    <section class="slide">{{{.}}}</section>
+  {{/slides}}
+</div>
+{{#controls}}
+  <div id="controls">
+    <div id="prev">&larr;</div>
+    <div id="next">&rarr;</div>
+  </div>
+{{/controls}}
+
+<script type="text/javascript">
+  {{{navigation}}}
+</script>
+```
+
+Power users may wish to render into custom templates. To do so, simply copy the above file
+somewhere, make some changes, and specify the template like so:
+
+```yaml
+title: Basic Example
+output: basic.html
+template: example.mustache
+```
 
 ### Contributing
 
